@@ -54,5 +54,19 @@ export default [
     movieDirector: "Yorgos Lanthimos",
     movieYear: "2009",
     moviePaybill: "kynodontas.jpg"
+  },
+  {
+    movieId: 8,
+    movieTitle: "The Interview",
+    movieDirector: "Evan Goldberg, Seth Rogen",
+    movieYear: "2014",
+    moviePaybill: "interview.jpg"
+  },
+  {
+    movieId: 9,
+    movieTitle: "Tenacious D in The Pick of Destiny",
+    movieDirector: "Liam Lynch",
+    movieYear: "2006",
+    moviePaybill: "pod.jpg"
   }
 ];
