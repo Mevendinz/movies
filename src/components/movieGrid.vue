@@ -2,25 +2,28 @@
   <div class="box-container">
     <h1>Movie Grid</h1>
     <div class="movie-collection">
-      <figure class="movie-box" v-for="movie in movies" :key="movie.movieId">
-        <img :src="require('@/assets/paybills/' + movie.moviePaybill)" />
-
-        <figcaption class="info-layer">
-          <p id="title">{{movie.movieTitle}}</p>
-          <p id="director">{{movie.movieDirector}}</p>
-          <p id="releaseYear">{{movie.movieYear}}</p>
-        </figcaption>
-      </figure>
+      <movieBox
+        v-for="movie in movies"
+        :key="movie.movieId"
+        :paybill="movie.moviePaybill"
+        :title="movie.movieTitle"
+        :director="movie.movieDirector"
+        :releaseYear="movie.movieYear"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import movieBox from "../components/movieBox";
 
 export default {
   data() {
     return {};
+  },
+  components: {
+    movieBox
   },
   computed: {
     ...mapState(["movies"])
@@ -34,88 +37,7 @@ export default {
   margin: auto;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-}
-
-p {
-  margin: 10px;
-}
-
-#title {
-  font-size: 15px;
-}
-
-#director {
-  font-size: 13px;
-}
-
-#releaseYear {
-  font-size: 10px;
-}
-
-.info-layer {
-  display: none;
-  visibility: hidden;
-  transition: background-color 0.3s, visibility 0.3s;
-  height: 25%;
-  width: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  text-align: left;
-}
-
 .movie-collection {
   margin-left: 5%;
-}
-
-.movie-box:hover > .info-layer {
-  display: block;
-  visibility: visible;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: background-color 0.3s, visibility 0.3s;
-  bottom: 0;
-}
-
-.movie-box {
-  float: left;
-  box-shadow: 0px 20px 15px;
-  height: 400px;
-  width: 300px;
-  margin: 20px;
-}
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-}
-
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-}
-
-.movie-box:hover {
-  background-color: grey;
-  color: cyan;
-  cursor: pointer;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 </style>
