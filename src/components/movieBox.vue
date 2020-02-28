@@ -71,6 +71,7 @@ p {
 
 .movie-box {
   float: left;
+  -webkit-user-drag: none;
   box-shadow: 0px 20px 15px;
   height: 400px;
   width: 300px;

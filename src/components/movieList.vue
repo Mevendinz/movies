@@ -33,7 +33,9 @@ export default {
 table {
   border-style: hidden;
   border-collapse: collapse;
-  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px !important;
+  width: 80%;
 }
 
 tr {
