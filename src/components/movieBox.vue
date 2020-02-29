@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <figure class="movie-box">
-      <img :src="require('@/assets/paybills/' + paybill)" />
+  <figure class="movie-box">
+    <img :src="require('@/assets/paybills/' + paybill)" />
 
-      <figcaption class="info-layer">
-        <p id="title">{{title}}</p>
-        <p id="director">{{director}}</p>
-        <p id="releaseYear">{{releaseYear}}</p>
-      </figcaption>
-    </figure>
-  </div>
+    <figcaption class="info-layer">
+      <p id="title">{{title}}</p>
+      <p id="director">{{director}}</p>
+      <p id="releaseYear">{{releaseYear}}</p>
+    </figcaption>
+  </figure>
 </template>
 
 <script>

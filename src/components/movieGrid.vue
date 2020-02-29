@@ -1,16 +1,15 @@
 <template>
-  <div class="box-container">
+  <div class="movie-collection">
     <h1>Movie Grid</h1>
-    <div class="movie-collection">
-      <movieBox
-        v-for="movie in movies"
-        :key="movie.movieId"
-        :paybill="movie.moviePaybill"
-        :title="movie.movieTitle"
-        :director="movie.movieDirector"
-        :releaseYear="movie.movieYear"
-      />
-    </div>
+
+    <movieBox
+      v-for="movie in movies"
+      :key="movie.movieId"
+      :paybill="movie.moviePaybill"
+      :title="movie.movieTitle"
+      :director="movie.movieDirector"
+      :releaseYear="movie.movieYear"
+    />
   </div>
 </template>
 
