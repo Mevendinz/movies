@@ -4,9 +4,8 @@
       <button class="left-button">List</button>
     </router-link>
     <router-link to="/grid">
-      <button>Grid</button>
+      <button class="right-button">Grid</button>
     </router-link>
-    <button class="right-button">Add</button>
   </nav>
 </template>
 
@@ -15,6 +14,11 @@ export default {};
 </script>
 
 <style scoped>
+nav {
+  float: right;
+  margin: 0 auto;
+}
+
 button {
   font-weight: bold;
   background-color: grey;
@@ -39,11 +43,5 @@ button:active {
 .right-button {
   border-radius: 0 20px 20px 0;
   border-left: 1px solid black;
-}
-
-nav {
-  display: inline-block;
-  position: absolute;
-  left: 90%;
 }
 </style>

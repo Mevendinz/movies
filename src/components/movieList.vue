@@ -33,8 +33,9 @@ export default {
 table {
   border-style: hidden;
   border-collapse: collapse;
+  box-shadow: 5px 5px 10px;
   margin: 0 auto;
-  margin-top: 100px !important;
+  margin-top: 50px;
   width: 80%;
 }
 

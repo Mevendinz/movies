@@ -1,15 +1,16 @@
 <template>
-  <div class="movie-collection">
+  <div>
     <h1>Movie Grid</h1>
-
-    <movieBox
-      v-for="movie in movies"
-      :key="movie.movieId"
-      :paybill="movie.moviePaybill"
-      :title="movie.movieTitle"
-      :director="movie.movieDirector"
-      :releaseYear="movie.movieYear"
-    />
+    <div class="movie-collection">
+      <movieBox
+        v-for="movie in movies"
+        :key="movie.movieId"
+        :paybill="movie.moviePaybill"
+        :title="movie.movieTitle"
+        :director="movie.movieDirector"
+        :releaseYear="movie.movieYear"
+      />
+    </div>
   </div>
 </template>
 
@@ -32,11 +33,9 @@ export default {
 </script>
 
 <style scoped>
-.box-container {
-  margin: auto;
-}
-
 .movie-collection {
-  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>
